@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="style1.css">
+    <title>Colculator</title>
+</head>
+<body>
+        <div class="container">
+            <h1 class="text-center">Qalyn calculator</h1>
+            <br>
+            <label for="name">Bride's/Groom's name:</label>
+            <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
+            <label for="starting bid">Starting bid:</label>
+            <input type="number" id="starting bid" name="starting bid" min="10" max="10000">
+            <label for="education">Bride's/Groom's Education:</label>
+              <select name="education" id="education">
+                <option value="1.5" id="d1">Undergraduate degree</option>
+                <option value="1.2" id="d2">College degree</option>
+                <option value="1.05" id="d3">High-school degree</option>
+                <option value="0.9" id="d4">Middle-school degree</option>
+              </select>
+              <hr>
+              <label for="worth">Bride's/Groom's Family's Net Worth:</label>
+              <select name="worth" id="worth">
+                <option value="2">More than 100,000$</option>
+                <option value="1.5">Between 50,000$ and 100,000$</option>
+                <option value="1.2">Less than 50,000$</option>
+              </select>
+              <hr>
+                <label for="skills">Bride's/Groom's Skills:</label><br>
+                <input type="checkbox" class="skills" value="100"> Playing on dombra<br>
+                <input type="checkbox" class="skills" value="200"> Good cook<br>
+                <input type="checkbox" class="skills" value="150"> Easygoing character<br>
+                <input type="checkbox" class="skills" value="100"> Sings well<br>
+              </form>
+      
+              <hr>
+                <label for="age">Bride's/Groom's Age:</label><br>
+                <input type="radio" id="age1" name="age" value="1.5" class="age1">
+                <label for="age1">Between 18-23</label><br>
+                <input type="radio" id="age2" name="age" value="1.2" class="age2">
+                <label for="age2">Between 24-27</label><br>
+                <input type="radio" id="age3" name="age" value="0.95" class="age3">
+                <label for="age3">28+</label>
+              </form>
+      
+              <hr>
+                <label for="reputation">Bride's/Groom's Reputation:</label><br>
+                <input type="checkbox" class="reputation1" value="0.85"> Gossips about his/her parents' attitude<br>
+                <input type="checkbox" class="reputation2" value="0.9"> Gossips about his/her character<br>
+                <input type="checkbox" class="reputation3" value="200"> General gossips about his/her person<br>
+                <hr>
+                <div class="form-group">
+                <label for="comment">Love letter:</label>
+                <textarea class="form-control" maxlength="500" id="comment"></textarea>
+                </div> 
+                <input type="submit" value="Submit" onClick="Calculator();">
+              </form>
+              <h2 class="text-center">Result: <span id="result"></span> $</h2>
+        <script type="text/javascript">
+          document.getElementById("result").innerHTML =localStorage.getItem("result");
+        </script>
+    <script src="script3.js"></script>
+</body>
+</html>
